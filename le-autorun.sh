@@ -15,7 +15,7 @@ echo "${YELLOW}**-_-_-_-_-_-_-_-_-_-_-_-_-_-_  ${NC}[ acme.sh script by @CryptoS
 echo " "
 echo "${LIGHT_BLUE}Auto-renewing LetsEncrypt Certificate for ${LIGHT_GRAY}${DOMAIN} ${LIGHT_BLUE}using acme.sh${NC}"
 "${ACME_PATH}"acme.sh --renew -d "${DOMAIN}" --force
-"${ACME_PATH}"acme.sh --install-cert -d "${DOMAIN}" --fullchain-file /etc/nginx-acme.sh/fullchain.p$
+"${ACME_PATH}"acme.sh --install-cert -d "${DOMAIN}" --fullchain-file /etc/nginx-acme.sh/fullchain.pem
 "${ACME_PATH}"acme.sh --install-cert -d "${DOMAIN}" --cert-file /etc/nginx-acme.sh/cert.pem
 "${ACME_PATH}"acme.sh --install-cert -d "${DOMAIN}" --key-file /etc/nginx-acme.sh/key.pem
 service nginx restart
